@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0A0A0A;
+  --color-foreground: #FFFFFF;
+  --color-primary: #B2EBF2;
+  --color-primary-foreground: #0A0A0A;
+  --color-muted: #888888;
+  --color-muted-foreground: #A1A1A1;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-card: #111111;
+  --color-card-foreground: #FFFFFF;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Glow card effect */
+.glow-card {
+  position: relative;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glow-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 40px rgba(178, 235, 242, 0.08), 0 0 80px rgba(178, 235, 242, 0.04);
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #b2ebf2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Subtle moving grid background */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 120px 120px;
+  background-position: 0 0;
+}
+
+@keyframes grid-move {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 40px 40px, 40px 40px;
+  }
+}
+
+.bg-grid-anim {
+  animation: grid-move 45s linear infinite;
+}
