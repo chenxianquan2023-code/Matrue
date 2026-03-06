@@ -14,7 +14,7 @@ const founders = [
       "前外企产品负责人、AI工程师，连续创业者。深耕AI电商与健康领域，擅长将复杂需求转化为精准的产品方案。",
   },
   {
-    name: "Aix",
+    name: "Alex",
     role: "Infra & Algorithm",
     avatar: "/aix.png",
     tags: ["Ex-ByteDance", "Volcano Engine", "High Concurrency"],

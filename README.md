@@ -18,7 +18,7 @@ Matrue 是一个由前大厂工程师和连续创业者组成的 AI 技术工作
 单页落地页，核心区块：
 
 1. **Hero** – 品牌主标语与核心价值承诺  
-2. **Founder Profiles** – 创始人介绍（Chambers & Aix，使用真实头像）  
+2. **Founder Profiles** – 创始人介绍（Chambers & Alex，使用真实头像）  
 3. **The Matrue Path** – 需求解构 → 架构打样 → 敏捷开发 → 压力测试 → 部署进化 的 5 步流程  
 4. **Key Projects**
    - OminiGen – 为 500+ 跨境卖家服务的 AI 智能营销平台  
@@ -64,7 +64,7 @@ lib/
 
 public/
   chambers.png      # Chambers 头像
-  aix.png           # Aix 头像
+  aix.png           # Alex 头像
 ```
 
 ## 设计与动效说明
