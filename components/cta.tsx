@@ -137,6 +137,14 @@ export function CTA() {
           <p className="text-sm text-muted-foreground">
             From Vision to MVP, Powered by AI.
           </p>
+          <a
+            href="https://beian.miit.gov.cn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-muted-foreground/50 hover:text-muted-foreground transition-colors"
+          >
+            晋ICP备2026002934号
+          </a>
         </div>
       </footer>
     </>

@@ -21,6 +21,14 @@ const founders = [
     description:
       "前字节跳动 API 负责人，火山引擎架构师。DAG 编排与高并发系统专家，构建经过亿级流量验证的基础设施。",
   },
+  {
+    name: "Kaixin",
+    role: "AI Research & Security",
+    avatar: "/kaixin.png",
+    tags: ["LLM Security", "RAG Architecture", "Multi-Agent", "Knowledge Graph"],
+    description:
+      "浙江工业大学计算机技术硕士，专注 LLM 安全与多智能体系统研究。擅长 RAG 架构设计与垂直领域知识图谱构建，具备从零搭建高精度智能问答系统的实战经验。",
+  },
 ];
 
 export function Founders() {
@@ -46,7 +54,7 @@ export function Founders() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {founders.map((founder, index) => {
             return (
               <motion.div
