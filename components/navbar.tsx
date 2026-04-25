@@ -5,10 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "About", href: "#founders" },
-  { label: "Process", href: "#process" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#founders" },
+  { label: "Process", href: "/#process" },
+  { label: "Projects", href: "/#projects" },
+  { label: "AI Future", href: "/ai-future" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Navbar() {
@@ -33,7 +34,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/#contact"
             className="text-sm font-medium bg-primary text-primary-foreground px-5 py-2 rounded-full hover:bg-primary/90 transition-colors duration-200"
           >
             Get Started
@@ -72,7 +73,7 @@ export function Navbar() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setIsOpen(false)}
                 className="text-sm font-medium bg-primary text-primary-foreground px-5 py-2 rounded-full text-center hover:bg-primary/90 transition-colors duration-200"
               >
