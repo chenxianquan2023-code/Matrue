@@ -6,7 +6,8 @@ import { useRef } from "react";
 const projects = [
   {
     label: "E-commerce AI",
-    title: "OminiGen",
+    title: "Moly",
+    href: "https://moly-production-2f51.up.railway.app/tools",
     description:
       "为 500+ 跨境卖家构建的 AI 智能营销平台。AI 驱动的商品分析、广告优化与供应链预测，帮助卖家实现数据驱动的精准运营。",
     metrics: [
@@ -19,6 +20,7 @@ const projects = [
   {
     label: "Health AI",
     title: "Ego",
+    href: undefined,
     description:
       "深度 AI 健康管理 iOS 应用。基于用户健康数据的个性化分析与建议，集成可穿戴设备数据，提供智能化的健康追踪与干预方案。",
     metrics: [
@@ -55,18 +57,32 @@ export function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => {
+            const Wrapper = project.href ? motion.a : motion.div;
+            const linkProps = project.href
+              ? {
+                  href: project.href,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                }
+              : {};
             return (
-              <motion.div
+              <Wrapper
                 key={project.title}
+                {...linkProps}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="glow-card p-8 sm:p-10 group cursor-pointer"
+                className="glow-card p-8 sm:p-10 group cursor-pointer block"
               >
-                <div className="mb-6">
+                <div className="mb-6 flex items-center justify-between">
                   <span className="text-xs font-medium text-primary/70 tracking-widest uppercase">
                     {project.label}
                   </span>
+                  {project.href && (
+                    <span className="text-xs text-primary/60 tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                      Open ↗
+                    </span>
+                  )}
                 </div>
 
                 <h3 className="text-xl sm:text-2xl font-bold mb-4 tracking-tight group-hover:text-primary transition-colors duration-300">
@@ -100,7 +116,7 @@ export function Projects() {
                     </span>
                   ))}
                 </div>
-              </motion.div>
+              </Wrapper>
             );
           })}
         </div>

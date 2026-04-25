@@ -17,10 +17,14 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border text-sm text-muted-foreground mb-8">
+          <a
+            href="/ai-future"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-sm text-primary/90 hover:border-primary/50 hover:bg-primary/10 transition-all duration-200 mb-8"
+          >
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            AI-Powered Development Studio
-          </div>
+            2026 企业 AI 转型实战指南 · 点此进入
+            <ArrowRight size={14} className="opacity-70" />
+          </a>
         </motion.div>
 
         <motion.h1
@@ -33,9 +37,9 @@ export function Hero() {
           }}
           className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-[1.1]"
         >
-          From Vision to MVP,
+          AI 时代，
           <br />
-          <span className="gradient-text">Powered by AI.</span>
+          <span className="gradient-text">我们能为企业做到什么。</span>
         </motion.h1>
 
         <motion.p
@@ -48,8 +52,9 @@ export function Hero() {
           }}
           className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
         >
-          来自大厂的 AI 精英团队，为创新者提供生产级 MVP 构建。
-          <br className="hidden sm:block" />3 天逻辑对齐，4-8 周完整交付。
+          降本是可以算的，增效是一个感受。
+          <br className="hidden sm:block" />
+          我们帮你把感受变成数字，把数字变成决策，把决策变成落地的系统。
         </motion.p>
 
         <motion.div
@@ -63,20 +68,20 @@ export function Hero() {
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href="#contact"
+            href="/ai-future"
             className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-medium text-sm hover:bg-primary/90 transition-all duration-200 shadow-[0_0_20px_rgba(178,235,242,0.3)] hover:shadow-[0_0_30px_rgba(178,235,242,0.5)]"
           >
-            Start Your Project
+            看我们能做什么
             <ArrowRight
               size={16}
               className="group-hover:translate-x-1 transition-transform duration-200"
             />
           </a>
           <a
-            href="#process"
+            href="#contact"
             className="inline-flex items-center gap-2 border border-border text-muted-foreground px-8 py-3.5 rounded-full font-medium text-sm hover:text-white hover:border-white/30 transition-all duration-200"
           >
-            How We Work
+            预约 30 分钟诊断
           </a>
         </motion.div>
       </div>
